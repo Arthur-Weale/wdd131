@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="WDD 131 – Dynamic Web Fundamentals | Arthur Weale | Welcome to my landing page! Learn more about me, my journey in web development, and my projects using HTML, CSS, and JavaScript.">
-    <meta author="Arthur Weale">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Arthur Weale | Welcome to my landing page! Learn more about me, my journey in web development, and my projects using HTML, CSS, and JavaScript.">
+    <meta name="author" content="Arthur Weale">
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
     <title>Personal landing Page</title>
 </head>
 <body>
@@ -27,14 +28,28 @@
             </div>
             <div class="left_subcontainer">
                 <div class="para_one">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aliquid, voluptas perspiciatis expedita porro perferendis praesentium similique nisi corporis officia a quis harum doloremque fuga? Voluptatem praesentium debitis error repellat?</p>
-                    <div class="country"><h2>Johannesburg, South Africa</h2>
-                        <hr></div>
+                    <p>My name is Arthur Weale, originally from Zimbabwe, but I currently reside in Johannesburg, South Africa. With roots in Zimbabwe and a journey that has brought me to the vibrant city of Johannesburg, I embrace the blend of cultures and experiences that shape my perspective. Whether it’s through my work, passions, or daily interactions, I strive to grow, learn, and make meaningful connections in this dynamic environment.I am particularly interested in front-end development and enjoy creating visually appealing and user-friendly interfaces. Problem-solving and critical thinking drive my approach to coding, allowing me to tackle challenges with creativity. Beyond tech, I have an entrepreneurial mindset and always seek innovative ways to blend business with technology. Living in Johannesburg has exposed me to a dynamic and fast-paced environment, which constantly pushes me to adapt and evolve. </p>
                 </div>
-                <div><img src="images/profile-image.jpg" alt="Arthur's profile image"></div>
+                <div class="profile-image">
+                    <img src="images/profile-image.jpg" alt="Arthur's profile image">
+                </div>
+                <div class="country">
+                    <h2>Johannesburg, South Africa</h2>
+                    <hr>
+                </div>
+                
                 <div class="para_two">
-                    <img src="images/profile-image.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quo consectetur consequatur unde earum repellat fuga quaerat modi temporibus, placeat aut soluta provident, excepturi molestiae quas itaque necessitatibus, nostrum saepe.</p>
+                    <div class="flag">
+                        <figure>
+                            <img src="images/flag.png" alt="The official flag of South Africa">
+                            <figcaption>The official flag of South Africa </figcaption>
+                        </figure>
+                        
+                    </div>
+                        <p>  South Africa, known as the "Rainbow Nation," is a diverse country at the southern tip of Africa. It boasts modern cities like Johannesburg and Cape Town, stunning landscapes, and rich cultural heritage. With 11 official languages, including Zulu, Xhosa, and Afrikaans, it reflects a multicultural society.
+
+                            The country played a major role in world history, notably ending apartheid under Nelson Mandela’s leadership. Its economy is among Africa’s largest, driven by mining, tourism, and finance. Despite challenges like inequality, South Africa remains a top tourist destination, offering safari adventures, coastal escapes, and vibrant city life.
+                        </p>
                 </div>
             </div>
         </section>
@@ -43,12 +58,21 @@
                 <h2>Web Dev Resources</h2>
             </div>
             <div class="right_container">
-
+                <div class="right_subcontainer">
+                    <ul>
+                        <li><a href="https://www.w3schools.com/"> W3Schools</a></li>
+                        <li><a href="https://www.udemy.com/">Udemy</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=VQgKSLkUNvQ">The Coding Sloth</a></li>
+                        <li><a href="https://stackoverflow.co/teams/">Stack Overflow</a></li>
+                        <li><a href="https://www.codecademy.com/">Codecademy</a></li>
+                    </ul>
+                </div>
+                
             </div>
         </section>
     </main>
     <footer>
-        <p>©️<span id="currentyear"></span>🦥 Arthur Weale 🦥 Zimbabwe, South-Africa</p>
+        <p>&copy;<span id="currentYear"></span>🦥 Arthur Weale 🦥 Zimbabwe, South-Africa</p>
         <p id="lastModified"></p>
     </footer>
 </body>
