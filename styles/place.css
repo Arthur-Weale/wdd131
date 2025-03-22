@@ -1,0 +1,171 @@
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+    --accent-color-one: green;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height: 70px;
+    align-content: center;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 570px;
+    margin-bottom: 0;
+    object-fit: fill;
+}
+
+.hero-image-container{
+    height: 570px;
+}
+
+.baby-image {
+    display: none;
+}
+
+.data-container , .weather-container {
+    position: absolute;
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.688);
+    padding: 10px;
+    width: 250px;
+}
+
+.data-container {
+    top: 100px;
+    left: 30px;
+}
+
+.data-container h3, .weather-container h3 {
+    background-color: rgba(0, 100, 0, 0.960);
+    padding: 10px;
+    margin: 0 40px 20px -20px;
+    color: var(--primary-color);
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.label {
+    min-width: 120px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.colon {
+    padding-right: 5px;
+}
+
+.value {
+    text-align: left;
+}
+
+.small-icon {
+    display: none;
+}
+
+
+.weather-container {
+    top: 350px;
+    right: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height: 70px;
+    align-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .weather-heading::after {
+        content: " ⛅";
+    }
+}
+
+@media (max-width: 768px) {
+
+    .weather-heading::after {
+        content: url("https://www.iconfinder.com/icons/1075473/cloud_sky_summer_sun_sunshine_tropics_weather_icon");
+    }
+
+
+.hero-image-container img {
+    height: 414px;
+} 
+
+.hero-image-container{
+    height: 414px;
+} 
+
+.small-icon {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-container , .weather-container {
+    position: static;
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.688);
+    padding: 10px;
+    width: 250px;
+    justify-self: center;
+}
+
+.data-container h3, .weather-container h3 {
+    background-color: none;
+    padding: 20px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+
+footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height: 100px;
+    padding: 20px;
+    align-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+}
