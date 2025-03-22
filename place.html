@@ -15,21 +15,36 @@
         <section>
             <div class="hero-image-container">
                 <picture>
-                    <source srcset="images/baby-hero.jpg" alt="This is an image of a baby elephant" media="min-width: 360px">
-                    <source src="images/hero.jpg" alt="This is an image of an elephant in the south african plains">
+                    <source srcset="images/baby-hero.webp" alt="This is an image of a baby elephant" media="(max-width: 768px)">
+                    <img src="images/hero.webp" alt="This is an image of an elephant in the south african plains">
                 </picture>
             </div>
             <div class="data-container">
                 <div>
                     <h3>Data</h3>
                 </div>
-                <div></div>
+                <div class="info-card">
+                    <div class="info-row"><span class="label">Area</span> <span class="colon"> : </span> <span class="value">1,221,037 km²</span></div>
+                    <div class="info-row"><span class="label">Population</span> <span class="colon"> : </span><span class="value">60,000,000</span></div>
+                    <div class="info-row"><span class="label">Capital</span><span class="colon"> : </span> <span class="value">Pretoria</span></div>
+                    <div class="info-row"><span class="label">Languages</span> <span class="colon"> : </span><span class="value">Zulu, Xhosa</span></div>
+                    <div class="info-row"><span class="label">Currency</span><span class="colon"> : </span> <span class="value">ZAR</span></div>
+                    <div class="info-row"><span class="label">Time Zone (UTC)</span><span class="colon"> : </span> <span class="value">UTC+2</span></div>
+                    <div class="info-row"><span class="label">Calling Code</span><span class="colon"> : </span> <span class="value">+27</span></div>
+                    <div class="info-row"><span class="label">Internet TLD</span><span class="colon"> : </span> <span class="value">.za</span></div>
+                </div>
             </div>
             <div class="weather-container">
-                <div>
-                    <h3>Weather</h3>
+                <div class="weather-card">
+                    <h3 class="weather-heading">Weather</h3>
+                    <img class="small-icon" src="images/partly-cloud.svg" alt="">
                 </div>
-                <div class="info-container"></div>
+                <div class="info-card">
+                    <div class="info-row"><span class="label">Temperature</span> <span class="colon"> : </span> <span class="value">10°C</span></div>
+                    <div class="info-row"><span class="label">Conditions</span> <span class="colon"> : </span><span class="value">Partly Cloudy</span></div>
+                    <div class="info-row"><span class="label">Wind</span><span class="colon"> : </span> <span class="value">5 km/h</span></div>
+                    <div class="info-row"><span class="label">WindChill</span> <span class="colon"> : </span><span class="value windchill-value"></span></div>
+                </div>
             </div>
         </section>
     </main>
