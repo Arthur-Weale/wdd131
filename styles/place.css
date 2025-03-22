@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat';
 }
 
 body {
@@ -113,10 +113,10 @@ footer {
 
 @media (max-width: 768px) {
 
-    .weather-heading::after {
-        content: url("https://www.iconfinder.com/icons/1075473/cloud_sky_summer_sun_sunshine_tropics_weather_icon");
-    }
-
+/* .header {
+    height: 100px !important;
+    padding: 20px;
+} */
 
 .hero-image-container img {
     height: 414px;
@@ -148,7 +148,6 @@ footer {
 }
 
 .data-container h3, .weather-container h3 {
-    background-color: none;
     padding: 20px;
     color: var(--secondary-color);
     text-align: center;
