@@ -105,11 +105,71 @@ const temples = [
         },
 ];
 
+const homeButton = document.getElementById("home-btn");
+const oldButton = document.getElementById("old-btn");
+const newButton = document.getElementById("new-btn");
+const largeButton = document.getElementById("large-btn");
+const smallButton = document.getElementById("small-btn");
+
+oldButton.addEventListener("click", () => {
+    const filteredTemples = temples.filter(temple => {
+        const yearDedicated = parseInt(temple.dedicated.split(",")[0]); // Convert to number
+        return yearDedicated < 1900; // Return only temples dedicated before 1900
+    });
+
+    mainContainer.innerHTML = ""; // ✅ Clear the container before adding new cards
+
+    populateContainer(filteredTemples); // Now this will log the correct filtered list
+});
+
+
+newButton.addEventListener("click", () => {
+    const filteredTemples = temples.filter(temple => {
+        const yearDedicated = parseInt(temple.dedicated.split(",")[0]); // Convert to number
+        return yearDedicated > 2000; // Return only temples dedicated before 1900
+    });
+
+    mainContainer.innerHTML = ""; // ✅ Clear the container before adding new cards
+
+    populateContainer(filteredTemples); // Now this will log the correct filtered list
+});
+
+largeButton.addEventListener("click", () => {
+    const filteredTemples = temples.filter(temple => {
+        const area = parseInt(temple.area); // Convert to number
+        return area > 90000; // Return only temples dedicated before 1900
+    });
+
+    mainContainer.innerHTML = ""; // ✅ Clear the container before adding new cards
+
+    populateContainer(filteredTemples); // Now this will log the correct filtered list
+});
+
+smallButton.addEventListener("click", () => {
+    const filteredTemples = temples.filter(temple => {
+        const area = parseInt(temple.area); // Convert to number
+        return area < 10000; // Return only temples dedicated before 1900
+    });
+
+    mainContainer.innerHTML = ""; // ✅ Clear the container before adding new cards
+
+    populateContainer(filteredTemples); // Now this will log the correct filtered list
+});
+
+homeButton.addEventListener("click", () => {
+
+    mainContainer.innerHTML = ""; // ✅ Clear the container before adding new cards
+
+    populateContainer(temples); // Now this will log the correct filtered list
+});
+
+
 const mainContainer = document.querySelector(".image-container");
 
-function populateContainer (temples){
 
-    const templeCard = temples.forEach(templeCardEnt => {
+function populateContainer (templeRes){
+
+    const templeCard = templeRes.forEach(templeCardEnt => {
 
     //Create main elements for the card
     const cardContainer = document.createElement("div");
