@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: blue;
+    --secondary-color: white;
+    --accent-color: black;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    font-family: 'Montserrat';
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    /* height: 50px; */
+    gap: 10px;
+    padding: 10px;
+    color: var(--secondary-color);
+    width: 100%;
+}
+
+.list-container {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    text-align: center;
+    width: 250px;
+    top: -250px;
+    top: 50px;
+    
+}
+
+.nav-container {
+    justify-items: center;
+    transition: left 0.3s ease-in-out;
+    left: -250px;
+} 
+
+
+.list-container.active{
+    display: flex;
+    left: 0;
+}
+
+ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    /* transition: background 0.3s ease-in-out, color 0.3s ease-in-out; */
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a:hover {
+    background-color: var(--accent-color);
+    padding: 10px 15px;
+    border-radius: 5px; 
+}
+
+main {
+    max-width: 800px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+figure img {
+    width: 250px;
+}
+
+main h1 {
+    font-size: 20px;
+    padding: 15px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    height: 60px;
+    justify-content: center;
+    align-content: center;
+}
+
+/* hamburger menu */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 150;
+}
+
+.bar {
+    margin: 5px auto;
+    width: 25px;
+    height: 3px;
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--secondary-color);
+}
+
+.hamburger.active .bar:nth-Child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-Child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-Child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.card-container {
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 305px;
+    min-width: 300px;
+}
+
+.temple-image {
+    border-radius: 10px;
+    /* min-height: 400px;
+    min-width: 250px; */
+    object-fit: cover;
+}
+
+.image-container {
+    gap: 10px;
+}
