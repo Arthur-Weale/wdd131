@@ -131,6 +131,7 @@ footer {
 
 .card-container {
     border: 1px solid gray;
+    background-color: lightgray;
     padding: 20px;
     border-radius: 10px;
     display: flex;

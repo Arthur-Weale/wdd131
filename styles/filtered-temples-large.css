@@ -1,0 +1,41 @@
+
+@media screen and (min-width: 768px) {
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        height: 70px;
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    .nav-container .list-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 500px;
+        height: 70px;
+        align-items: center;
+    }
+
+    .image-container {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .card-container{
+        min-height: 450px;
+    }
+}
